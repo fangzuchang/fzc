@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>登录</title>
+	<!-- 引入样式 -->
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$("#refuse").bind('mouseover', function () {
+				//浏览器高度减去弹窗高度乘以随机数
+				var margin_top = (window.outerHeight - $("#dialog").height() - 200) * Math.random();
+				//浏览器宽度减去弹窗宽度乘以随机数
+				var margin_left = (window.outerWidth - $("#dialog").width() - 200) * Math.random();
+				$("#dialog").css('margin-top', margin_top + "px");
+				$("#dialog").css('margin-left', margin_left + "px");
+			});
+			$("#agree").click(function () {
+				alert("么么哒");
+			});
+		});
+	</script>
+	<style>
+		#dialog {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			background: white;
+			border: 1px solid pink;
+			border-radius: 5px 5px 5px 5px;
+			width: 350px;
+			height: 250px;
+		}
+
+		#content {
+			height: 210px;
+			width: auto;
+			border-bottom: 1px solid #ebeaea;
+			position: relative;
+			border-radius: 5px 5px 0 0;
+			font-size: 24px;
+			font-family: 楷体;
+		}
+
+		#foot {
+			height: 40px;
+			background-color: #4d4d4d;
+			width: 100%;
+			border-radius: 0px 0px 5px 5px;
+		}
+
+		.button-class {
+			color: white;
+			background: #42b3e5;
+			width: 50px;
+			margin-top: 5px;
+			height: 30px;
+			line-height: 20px;
+			font-size: 14px;
+			text-align: center;
+			border-radius: 5px;
+			float: right;
+			margin-right: 10px;
+			border: none;
+		}
+	</style>
+</head>
+
+<body style="background: pink;width: 100%;height: 100%;">
+	<!-- 弹窗 -->
+	<div id="dialog">
+		<!-- 内容 -->
+		<div id="content">
+			<br/>
+			<br/>
+			<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;做我老婆吧
+			<br/>
+			<br/>
+			<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 方祖昌
+		</div>
+		<!-- 按钮 -->
+		<div id="foot">
+			<button class="button-class" id="refuse">拒绝</button>
+			<button class="button-class" id="agree">同意</button>
+		</div>
+	</div>
+</body>
+
+</html>

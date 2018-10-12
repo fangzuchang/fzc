@@ -3985,8 +3985,7 @@
 					$("#dialog").css('margin-top', margin_top + "px");
 					$("#dialog").css('margin-left', margin_left + "px");
 				}
-				$("#refuse").bind('mouseover', changePosition);
-				$("#refuse").bind('touchstart', changePosition);
+				$("#refuse").bind({mouseover:changePosition,touchstart:changePosition});
 				$("#agree").click(function() {
 					alert("么么哒");
 				});

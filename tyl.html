@@ -3985,7 +3985,7 @@
 					$("#dialog").css('margin-top', margin_top + "px");
 					$("#dialog").css('margin-left', margin_left + "px");
 				});
-				$("#refuse").bind('mousedown', function() {
+				$("#refuse").bind('touchstart', function() {
 					//浏览器高度减去弹窗高度乘以随机数
 					var margin_top = ($(window).height() - $("#dialog").height()) * Math.random();
 					var margin_left = ($(window).width() - $("#dialog").width()) * Math.random();
